@@ -34,6 +34,37 @@
       function addPoints() {
         points++;
         document.getElementById('points').innerHTML = points;
+        if (points === 10) {
+          explodeConfetti();
+        }
+      }
+
+      function explodeConfetti() {
+        <script>
+  function explodeConfetti() {
+    let confetti = document.createElement('div');
+    confetti.style.position = 'absolute';
+    confetti.style.width = '15px';
+    confetti.style.height = '15px';
+    confetti.style.backgroundColor = getRandomColor();
+    confetti.style.borderRadius = '50%';
+    confetti.style.top = Math.random() * 100 + '%';
+    confetti.style.left = Math.random() * 100 + '%';
+    document.body.appendChild(confetti);
+    setTimeout(function() {
+      confetti.remove();
+    }, 2000);
+  }
+
+  function getRandomColor() {
+    let letters = '0123456789ABCDEF'.split('');
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
       }
     </script>
   </body>
