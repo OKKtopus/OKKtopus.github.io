@@ -1,15 +1,20 @@
-# Import libraries
-from flask import Flask, render_template
+<html>
+  <head>
+    <title>Click to Earn Points</title>
+  </head>
+  <body>
+    <h1>Click to Earn Points</h1>
+    <p>Click the button below to earn points:</p>
 
-# Create an instance of Flask
-app = Flask(__name__)
+    <button onclick="addPoints()">Earn Points</button>
+    <p>You have <span id="points">0</span> points.</p>
 
-# Define a route for the home page
-@app.route('/')
-def home():
-    # Render a template
-    return render_template('index.html')
-
-# Run the app
-if __name__ == '__main__':
-    app.run(debug=True)
+    <script>
+      let points = 0;
+      function addPoints() {
+        points++;
+        document.getElementById('points').innerHTML = points;
+      }
+    </script>
+  </body>
+</html>
