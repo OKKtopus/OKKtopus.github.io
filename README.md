@@ -35,6 +35,7 @@
         in english isn't it. Anyways, I've got to clean my glasses and prepare for
         being the best NARCie you've ever seen so I'll hit you up later.
       </p>
+      <iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=celeste_classic_2" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
       <h2>My Work</h2>
       <ul>
         <li>
