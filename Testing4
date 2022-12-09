@@ -1,98 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Platforming Game</title>
+    <title>My Website</title>
+    <meta charset="utf-8">
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
+      /* Add CSS styles here */
+      body {
+        font-family: sans-serif;
+        background-color: #f1f1f1;
       }
-      #game {
-        position: relative;
-        width: 600px;
-        height: 400px;
-        margin: 0 auto;
-        background: #ccc;
+      header {
+        text-align: center;
+        padding: 30px;
+        background-color: #333;
+        color: #fff;
       }
-      #player {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        background: #333;
-        left: 20px;
-        top: 20px;
-      }
-      #platform {
-        position: absolute;
-        width: 500px;
-        height: 40px;
-        background: #000;
-        left: 50px;
-        top: 200px;
+      main {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
       }
     </style>
-    
-    <script>
-      window.onload = function() {
-        // Get the player element
-        var player = document.getElementById("player");
-        // Get the platform element
-        var platform = document.getElementById("platform");
-        
-        // Set up the initial position
-        var xPos = 0;
-        var yPos = 0;
-        
-        // Set up the movement variables
-        var xSpeed = 5;
-        var ySpeed = 5;
-        
-        // Set up the keypress variables
-        var leftPressed = false;
-        var rightPressed = false;
-        var upPressed = false;
-        var downPressed = false;
-        
-        // Set up the game loop
-        setInterval(function() {
-          // Move the player
-          if (leftPressed) xPos -= xSpeed;
-          if (rightPressed) xPos += xSpeed;
-          if (upPressed) yPos -= ySpeed;
-          if (downPressed) yPos += ySpeed;
-          
-          // Check for collisions with the platform
-          if (xPos < platform.offsetLeft + platform.offsetWidth &&
-              xPos + player.offsetWidth > platform.offsetLeft &&
-              yPos < platform.offsetTop + platform.offsetHeight &&
-              yPos + player.offsetHeight > platform.offsetTop) {
-            yPos = platform.offsetTop - player.offsetHeight;
-          }
-          
-          // Move the player
-          player.style.left = xPos + 'px';
-          player.style.top = yPos + 'px';
-        }, 10);
-        
-        // Set up the key press handlers
-        document.addEventListener("keydown", function(e) {
-          if (e.keyCode === 37) leftPressed = true;
-          if (e.keyCode === 38) upPressed = true;
-          if (e.keyCode === 39) rightPressed = true;
-          if (e.keyCode === 40) downPressed = true;
-        });
-        document.addEventListener("keyup", function(e) {
-          if (e.keyCode === 37) leftPressed = false;
-          if (e.keyCode === 38) upPressed = false;
-          if (e.keyCode === 39) rightPressed = false;
-          if (e.keyCode === 40) downPressed = false;
-        });
-      };
-    </script>
   </head>
   <body>
-    <div id="game">
-      <div id="player"></div>
-      <div id="platform"></div>
-    </div>
+    <header>
+      <h1>My Website</h1>
+    </header>
+    <main>
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed at ante dignissim, placerat elit vel, sollicitudin eros.
+        Nullam vel velit scelerisque, auctor est sed, tincidunt nulla.
+        Etiam fermentum felis eu facilisis faucibus.
+      </p>
+      <h2>My Work</h2>
+      <ul>
+        <li>
+          <a href="#">Project 1</a>
+        </li>
+        <li>
+          <a href="#">Project 2</a>
+        </li>
+        <li>
+          <a href="#">Project 3</a>
+        </li>
+      </ul>
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
+    </main>
   </body>
+</html>
