@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
+    <title>Kevin Park's website</title>
     <meta charset="utf-8">
     <style>
       /* Add CSS styles here */
@@ -24,26 +24,27 @@
   </head>
   <body>
     <header>
-      <h1>My Website</h1>
+      <h1>Kevin Park's Blog</h1>
     </header>
     <main>
       <h2>About Me</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Sed at ante dignissim, placerat elit vel, sollicitudin eros.
-        Nullam vel velit scelerisque, auctor est sed, tincidunt nulla.
-        Etiam fermentum felis eu facilisis faucibus.
+        I'm not very good at coding, but I have a big heart. You might know ne
+        for being Korean, which is very valid. Usually, I watch K dramas all day
+        but occasionally I listen to BlackPink. Ironic how a Kpop band's name is 
+        in english isn't it. Anyways, I've got to clean my glasses and prepare for
+        being the best NARCie you've ever seen so I'll hit you up later.
       </p>
       <h2>My Work</h2>
       <ul>
         <li>
-          <a href="#">Project 1</a>
+          <a href="#">Nothing</a>
         </li>
         <li>
-          <a href="#">Project 2</a>
+          <a href="#">Nothing</a>
         </li>
         <li>
-          <a href="#">Project 3</a>
+          <a href="#">Nothing</a>
         </li>
       </ul>
       <h2>Contact Me</h2>
