@@ -1,71 +1,98 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Click to Earn Points</title>
+    <title>Platforming Game</title>
     <style>
-      button {
-        font-size: 1.3em;
-        background-color: #4CAF50; 
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin: 4px 2px;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-        cursor: pointer;
+      html, body {
+        margin: 0;
+        padding: 0;
       }
-      button:hover {
-        background-color: #45a049;
-        color: white;
+      #game {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        background: #ccc;
+      }
+      #player {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #333;
+        left: 20px;
+        top: 20px;
+      }
+      #platform {
+        position: absolute;
+        width: 500px;
+        height: 40px;
+        background: #000;
+        left: 50px;
+        top: 200px;
       }
     </style>
+    
+    <script>
+      window.onload = function() {
+        // Get the player element
+        var player = document.getElementById("player");
+        // Get the platform element
+        var platform = document.getElementById("platform");
+        
+        // Set up the initial position
+        var xPos = 0;
+        var yPos = 0;
+        
+        // Set up the movement variables
+        var xSpeed = 5;
+        var ySpeed = 5;
+        
+        // Set up the keypress variables
+        var leftPressed = false;
+        var rightPressed = false;
+        var upPressed = false;
+        var downPressed = false;
+        
+        // Set up the game loop
+        setInterval(function() {
+          // Move the player
+          if (leftPressed) xPos -= xSpeed;
+          if (rightPressed) xPos += xSpeed;
+          if (upPressed) yPos -= ySpeed;
+          if (downPressed) yPos += ySpeed;
+          
+          // Check for collisions with the platform
+          if (xPos < platform.offsetLeft + platform.offsetWidth &&
+              xPos + player.offsetWidth > platform.offsetLeft &&
+              yPos < platform.offsetTop + platform.offsetHeight &&
+              yPos + player.offsetHeight > platform.offsetTop) {
+            yPos = platform.offsetTop - player.offsetHeight;
+          }
+          
+          // Move the player
+          player.style.left = xPos + 'px';
+          player.style.top = yPos + 'px';
+        }, 10);
+        
+        // Set up the key press handlers
+        document.addEventListener("keydown", function(e) {
+          if (e.keyCode === 37) leftPressed = true;
+          if (e.keyCode === 38) upPressed = true;
+          if (e.keyCode === 39) rightPressed = true;
+          if (e.keyCode === 40) downPressed = true;
+        });
+        document.addEventListener("keyup", function(e) {
+          if (e.keyCode === 37) leftPressed = false;
+          if (e.keyCode === 38) upPressed = false;
+          if (e.keyCode === 39) rightPressed = false;
+          if (e.keyCode === 40) downPressed = false;
+        });
+      };
+    </script>
   </head>
   <body>
-    <h1>Click to Earn Points</h1>
-    <p>Click the button below to earn points:</p>
-
-    <button onclick="addPoints()">Earn Points</button>
-    <p>You have <span id="points">0</span> points.</p>
-
-    <script>
-      let points = 0;
-      function addPoints() {
-        points++;
-        document.getElementById('points').innerHTML = points;
-        if (points === 10) {
-          explodeConfetti();
-        }
-      }
-
-      function explodeConfetti() {
-        <script>
-  function explodeConfetti() {
-    let confetti = document.createElement('div');
-    confetti.style.position = 'absolute';
-    confetti.style.width = '15px';
-    confetti.style.height = '15px';
-    confetti.style.backgroundColor = getRandomColor();
-    confetti.style.borderRadius = '50%';
-    confetti.style.top = Math.random() * 100 + '%';
-    confetti.style.left = Math.random() * 100 + '%';
-    document.body.appendChild(confetti);
-    setTimeout(function() {
-      confetti.remove();
-    }, 2000);
-  }
-
-  function getRandomColor() {
-    let letters = '0123456789ABCDEF'.split('');
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-</script>
-      }
-    </script>
+    <div id="game">
+      <div id="player"></div>
+      <div id="platform"></div>
+    </div>
   </body>
-</html>
