@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Kevin Park's website</title>
-    <meta charset="utf-8">
-    <style>
-      /* Add CSS styles here */
-      body {
-        font-family: sans-serif;
-        background-color: #f1f1f1;
-      }
-      header {
-        text-align: center;
-        padding: 30px;
-        background-color: #333;
-        color: #fff;
-      }
-      main {
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Kevin Park's Blog</h1>
-    </header>
-    <main>
-      <h2>About Me</h2>
-      <p>
-        I'm not very good at coding, but I have a big heart. You might know ne
-        for being Korean, which is very valid. Usually, I watch K dramas all day
-        but occasionally I listen to BlackPink. Ironic how a Kpop band's name is 
-        in english isn't it. Anyways, I've got to clean my glasses and prepare for
-        being the best NARCie you've ever seen so I'll hit you up later.
-      </p>
-      <h2>My Work</h2>
-      <ul>
-        <li>
-          <a href="#">Nothing</a>
-        </li>
-        <li>
-          <a href="#">Nothing</a>
-        </li>
-        <li>
-          <a href="#">Nothing</a>
-        </li>
-      </ul>
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message"></textarea><br>
-        <input type="submit" value="Submit">
-      </form>
-    </main>
-  </body>
+<head>
+  <title>Nike</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+    nav li {
+      flex: 1;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nike</h1>
+  </header>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>Kids</li>
+      <li>Sale</li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Welcome to Nike</h2>
+    <p>We're a leading sports brand offering a wide range of products for men, women, and kids.</p>
+  </main>
+  <footer>
+    <p>Copyright Nike 2022</p>
+  </footer>
+</body>
 </html>
